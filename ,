@@ -1,0 +1,29 @@
+[33mcommit f24069afec56f6fd47b8f7e05cfb078b539d1ac8[m
+Author: jenb <jjbordafunsanmateo.edu.co>
+Date:   Thu Mar 31 00:37:36 2016 -0500
+
+    creando servlet
+
+[33mcommit e982218220b58d56d63bf513e3e5df9f97d6ae17[m
+Author: jenb <jjbordafunsanmateo.edu.co>
+Date:   Wed Mar 30 23:37:17 2016 -0500
+
+    se creo la interface web formulario
+
+[33mcommit dbfff8a48c05fd1172999e2744a5b240c0815d65[m
+Author: jenb <jjbordafunsanmateo.edu.co>
+Date:   Wed Mar 30 13:36:45 2016 -0500
+
+    creando los getter y setters
+
+[33mcommit d1bb6213fe13a060fb675cbff9cea80e85a41376[m
+Author: jenb <jjbordafunsanmateo.edu.co>
+Date:   Wed Mar 30 13:32:12 2016 -0500
+
+    creando la conexion a la base de datos
+
+[33mcommit d1c38beac0b25e0b6d2166d9ef1a4fa44dd95564[m
+Author: jenb <jjbordafunsanmateo.edu.co>
+Date:   Wed Mar 30 00:08:50 2016 -0500
+
+    iniciamos

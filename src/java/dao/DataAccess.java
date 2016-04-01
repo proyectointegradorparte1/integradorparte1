@@ -22,7 +22,7 @@ import modelo.modelo1;
 public class DataAccess {
     public void addNew(modelo1 n){
         try {
-            PreparedStatement ps = conexion.getPreparestatement("insert into modelo1 values  (?,?,?,?,?,?");
+            PreparedStatement ps = conexion.getPreparestatement("INSERT INTO datos (id,nombre,apellido,correo,telefono) VALUES (?,?,?,?,?)");
             ps.setInt(1, n.getId());
             ps.setString(2,n.getNombre());
             ps.setString(3,n.getApellido());
@@ -38,11 +38,11 @@ public class DataAccess {
     public static List<modelo1> getAll(){
       List<modelo1> ls = new LinkedList<>();
         try {
-            ResultSet rs= conexion.getPreparestatement(" select * from modelo1").executeQuery();
-            while (rs.next());
+            ResultSet rs= conexion.getPreparestatement(" SELECT * FROM datos").executeQuery();
+            while (rs.next()){
             modelo1 n= new modelo1(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5));
             ls.add(n);
-            
+            }
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DataAccess.class.getName()).log(Level.SEVERE, null, ex);
         }

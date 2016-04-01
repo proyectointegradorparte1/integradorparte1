@@ -19,15 +19,15 @@ import java.sql.SQLException;
 public class conexion {
     public static PreparedStatement getPreparestatement(String sql) throws ClassNotFoundException, SQLException{
         PreparedStatement ps = null;
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        String url = "jdbc:sqlservert://localhost:1433;databaseName=registro";
-        String user="root";
-        String  pass="";
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost/registro","root","");
+        Class.forName("com.mysql.jdbc.Driver");
+//        String url = "jdbc:sqlservert://localhost:1527;databaseName=registro";
+//        String user="root";
+//        String  pass="";
+        Connection con =DriverManager.getConnection("jdbc:mysql://localhost/registro","root","");
         ps= con.prepareStatement(sql);
                 return ps;
     }
 //    public static void main(String[] args) throws ClassNotFoundException, SQLException{
-//        getPreparestatement("select * from new ");
+//        getPreparestatement("select * from datos ");
 //    }
 }

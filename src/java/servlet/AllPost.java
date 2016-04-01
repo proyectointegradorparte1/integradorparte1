@@ -5,8 +5,10 @@
  */
 package servlet;
 
+import dao.DataAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,6 +33,9 @@ public class AllPost extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setAttribute("AllPost",DataAccess.getAll());
+        RequestDispatcher rd= request.getRequestDispatcher("AllPost.jsp");
+        rd.forward(request, response);
         
         
     }

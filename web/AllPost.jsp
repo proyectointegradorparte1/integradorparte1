@@ -27,14 +27,14 @@
                </tr>
                <c:forEach items="${AllPost}" var="p">
                    <tr>
-                       <td>  ${p.dato_id}</td>
-                       <td>  ${p.dato_nombre}</td>
-                       <td>  ${p.dato_apellido}</td>
-                       <td>  ${p.dato_correo}</td>
-                       <td>  ${p.dato_telefono}</td>
+                       <td>  ${p.id}</td>
+                       <td>  ${p.nombre}</td>
+                       <td>  ${p.apellido}</td>
+                       <td>  ${p.correo}</td>
+                       <td>  ${p.telefono}</td>
                        <td> 
-                           <a href="edit?id=${p.dato_id}">EDITAR</a>
-                           <a href="deleteid=${p.dato_id}">ELIMINAR</a>
+                           <a href="edit?id=${p.id}">EDITAR</a>
+                           <a href="deleteid=${p.id}">ELIMINAR</a>
                            
                        
                        </td>
