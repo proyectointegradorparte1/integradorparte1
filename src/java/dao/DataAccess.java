@@ -54,7 +54,7 @@ public class DataAccess {
     }
     public static List<modelo1> getNewById(int id){
       List<modelo1> ls = new LinkedList<>();
-      String sql= " SELECT * FROM datos WHERE id = " +id;
+      String sql= "select * from datos where id = " +id;
         try {
             ResultSet rs= conexion.getPreparedStatement(sql).executeQuery();
             while (rs.next()){
@@ -71,17 +71,17 @@ public class DataAccess {
       return ls;
     }
     
-    public void editar(int id,String nombre,String apellido,String correo,String telefono){
+    public void editar( int id, String nombre, String apellido, String correo, String telefono){
          
         try {
-           String sql= " update datos SET nombre=?,apellido=?,correo=?,telefono=? " + " where id = ?";
+           String sql= "update datos set nombre = ?,apellido=?,correo=?,telefono=?" + " where id = ?";
             PreparedStatement ps;
             ps = conexion.getPreparedStatement(sql);
               ps.setString(1, nombre);
               ps.setString(2, apellido);
               ps.setString(3, correo);
               ps.setString(4, telefono);
-              ps.setInt(6, id);
+              ps.setInt(5, id);
               ps.executeUpdate();
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DataAccess.class.getName()).log(Level.SEVERE, null, ex);
@@ -92,7 +92,7 @@ public class DataAccess {
     
     public void eliminar(int id){
         try {
-            String sql= " DELETE datos WHERE id = ?";
+            String sql = "delete FROM datos where id = ?";
             PreparedStatement ps = conexion.getPreparedStatement(sql);
             ps.setInt(1, id);
             ps.executeUpdate();

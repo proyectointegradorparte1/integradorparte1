@@ -33,8 +33,8 @@ public class AllPost extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute("AllPost",DataAccess.getAll());
-        RequestDispatcher rd= request.getRequestDispatcher("AllPost.jsp");
+        request.setAttribute("AllPost", DataAccess.getAll());
+        RequestDispatcher rd = request.getRequestDispatcher("AllPost.jsp");
         rd.forward(request, response);
         
         

@@ -11,12 +11,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>editar</title>
+        <title>Editar</title>
     </head>
     <body>
         <h1>nueva edicion </h1>
         <div style="width:900px; margin-left: auto;margin-right: auto">
-            <c:forEach items="${getNewsById}" var="p">
+            <c:forEach items="${getNewById}" var="p">
                 <form  action="JSP/ManagerEditPost.jsp"    method="post">
              
              <input type="hidden" name="id" value="${p.id}" >
