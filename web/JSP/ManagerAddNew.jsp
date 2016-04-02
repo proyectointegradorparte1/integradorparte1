@@ -29,7 +29,7 @@
            String correo = request.getParameter("correo");
            String telefono = request.getParameter("telefono");
            
-            modelo1 n= new modelo1(0, nombre, apellido, correo,0);
+            modelo1 n= new modelo1(0, nombre, apellido, correo,telefono);
             DataAccess da = new DataAccess();
             da.addNew(n);
             response.sendRedirect("/integradorparte1/AllPost");

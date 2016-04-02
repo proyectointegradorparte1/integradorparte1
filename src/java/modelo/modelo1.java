@@ -14,9 +14,9 @@ public class modelo1 {
     private String nombre;
     private String apellido;
     private String correo;
-    private int telefono;
+    private String telefono;
 
-    public modelo1(int id, String nombre, String apellido, String correo, int telefono) {
+    public modelo1(int id, String nombre, String apellido, String correo, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -58,11 +58,11 @@ public class modelo1 {
         this.correo = correo;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
     

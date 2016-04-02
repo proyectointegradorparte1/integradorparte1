@@ -33,8 +33,8 @@
                        <td>  ${p.correo}</td>
                        <td>  ${p.telefono}</td>
                        <td> 
-                           <a href="edit?id=${p.id}">EDITAR</a>
-                           <a href="deleteid=${p.id}">ELIMINAR</a>
+                           <a href="editar?id=${p.id}">EDITAR</a>
+                           <a href="eliminar?id=${p.id}">ELIMINAR</a>
                            
                        
                        </td>
